@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -16,6 +15,6 @@ function App(props) {
       <button type='button' onClick={handlePesquisa}> Pesquisar</button>
     </>
   );
-}
+};
 
 export default App;
