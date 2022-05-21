@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+
+import { useNavigate } from 'react-router-dom'
 
 
 function App(props) {
@@ -10,10 +11,12 @@ function App(props) {
     axios.get(`https://api.github.com/users/${usuario}/repos`).then( response => {
     const repositories = response.data;
     const repositoriesName = [];
-    repositories.map((repository)=> repositoriesName.push(repository.name));
-    localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));   
+    repositories.map((repository)=> {
+      repositoriesName.push(repository.name);
+    });
+    localStorage.setItem('JSON.stringify(repositoriesName); ', JSON.stringify(repositoriesName)); 
     navigate('./repositories');
-});
+   });
   }
 
   return (
